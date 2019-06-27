@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js学习</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="appShow" v-bind:title="msgtit">{{messege}}</div>
+    <div id="app-2">
+        <ol>
+            <li v-for="todo in todos">{{todo.item}}</li>
+        </ol>
+    </div>
+</body>
+<script type="application/javascript">
+        var appSHow=new Vue({
+            el:'#appShow',
+            data:{
+                messege:'vue.js 第一个样式',
+                msgtit:'vue的指令集'+new Date().toLocaleDateString()
+            }
+        })
+        var app2=new Vue({
+            el:'#app-2',
+            data:{
+                todos:[
+                    {item:'第一个循环'},
+                    {item:'第二个循环'},
+                    {item:'返闻闻自性，性成无上道'}
+                ]
+            }
+        })
+</script>
+</html>
